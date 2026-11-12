@@ -19,10 +19,11 @@ Open [http://localhost:3000](http://localhost:3000) to preview the site. The pag
 - `src/app/page.module.css` — page-specific responsive styles
 - `src/app/globals.css` — shared color, typography, and browser defaults
 - `src/app/layout.tsx` — site metadata and root layout
-- `src/components/bert-mascot.tsx` — original vector mascot illustration
-- `public/` — static assets
+- `src/components/bert-mascot.tsx` — custom Bert SVG illustration
+- `public/bert-logo.webp` — optimized brand logo
+- `public/` — other static assets
 
-The warm, neighborly visual style is for the main tech-support offering. A separate electric-blue section introduces small-business data services as a future offering. The contact details and service list are draft content to confirm before launch; the preview does not submit leads.
+The warm, neighborly visual style is for the main tech-support offering. A separate electric-blue section presents AI automation and business intelligence services. Phone, text, email, and Facebook links are wired to Bert's contact details.
 
 ## Useful commands
 
