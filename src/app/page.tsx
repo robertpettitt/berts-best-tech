@@ -1,10 +1,10 @@
-import BertMascot from "@/components/bert-mascot";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 const services = [
   {
     number: "01",
-    title: "Computer help",
+    title: "Computer & Phone help",
     description:
       "Setup, slowdowns, updates, and those mysterious pop-ups. We’ll work through it together.",
     icon: "computer",
@@ -13,7 +13,7 @@ const services = [
     number: "02",
     title: "Wi-Fi & home tech",
     description:
-      "Get your internet, printer, streaming gear, and other devices playing nicely.",
+      "Wi-Fi, printers, smart-home gear, and security cameras—installed and working together.",
     icon: "wifi",
   },
   {
@@ -61,9 +61,14 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <a className={styles.brand} href="#top" aria-label="Bert's Best Tech home">
-            <span className={styles.brandMark} aria-hidden="true">
-              b.
-            </span>
+            <Image
+              className={styles.brandLogo}
+              src="/bert-logo.webp"
+              alt=""
+              width={62}
+              height={62}
+              priority
+            />
             <span className={styles.brandText}>
               <strong>Bert&apos;s Best Tech</strong>
               <span>Fox Valley, Wisconsin</span>
@@ -72,7 +77,7 @@ export default function Home() {
           <nav className={styles.nav} aria-label="Main navigation">
             <a href="#services">Tech help</a>
             <a href="#laughs">The funny side</a>
-            <a href="#data">Data services</a>
+            <a className={styles.dataNav} href="#data">AI &amp; BI</a>
           </nav>
           <a className={styles.headerCta} href="#contact">
             Let&apos;s talk <span aria-hidden="true">↗</span>
@@ -115,20 +120,15 @@ export default function Home() {
             </div>
 
             <div className={styles.heroArt}>
-              <div className={styles.artHalo} />
-              <div className={styles.artStamp}>
-                <span>YOUR LOCAL</span>
-                <strong>TECH<br />BUDDY</strong>
-              </div>
-              <BertMascot className={styles.mascot} />
-              <div className={styles.speechBubble}>
-                <span>Take a breath.</span>
-                We&apos;ll figure it out.
-              </div>
-              <div className={styles.artCaption}>
-                <span className={styles.captionLine} />
-                Meet Bert
-              </div>
+              <Image
+                className={styles.mascot}
+                src="/bert-hero.png"
+                alt="Cartoon Bert smiling with crossed arms in a black polo and smartwatch, with the messages “Your Local Tech Buddy” and “Take a breath. We’ll figure it out.”"
+                width={850}
+                height={768}
+                priority
+                sizes="(max-width: 760px) 100vw, 45vw"
+              />
             </div>
           </div>
           <div className={styles.heroGround} aria-hidden="true" />
@@ -188,12 +188,11 @@ export default function Home() {
                 <em>family sport.</em>
               </h2>
               <p>
-                You know the scene: one tiny tech question turns into a full
-                afternoon at the kitchen table. Bert turns those familiar
-                moments into little comedy sketches—with affection, not
-                eye-rolls.
+                We&apos;ve all been there: stuck on the phone for an hour trying
+                to figure something out. Let&apos;s turn those moments into
+                something to laugh about—and bond over.
               </p>
-              <span className={styles.comedyTag}>Bert&apos;s tech-help skits · coming soon</span>
+              <span className={styles.comedyTag}>Bert&apos;s Best Skits</span>
             </div>
             <div className={styles.comedyCard} aria-label="A preview of Bert's comedy skits">
               <div className={styles.comedyCardTop}>
@@ -203,9 +202,9 @@ export default function Home() {
               <div className={styles.comedyQuote}>
                 <span aria-hidden="true">&ldquo;</span>
                 <p>
-                  I said the computer needs an update.
+                  Dad... the last time your internet went out,
                   <br />
-                  <strong>Not a new computer, Mom.</strong>
+                  <strong>we didn&apos;t hear from you for three weeks!</strong>
                 </p>
               </div>
               <div className={styles.comedyCardBottom}>
@@ -219,35 +218,62 @@ export default function Home() {
 
         <section className={styles.dataSection} id="data" aria-labelledby="data-title">
           <div className={styles.dataInner}>
-            <div className={styles.dataCopy}>
+            <div className={styles.dataIntro}>
               <p className={styles.dataEyebrow}>
                 <span className={styles.dataPulse} />
-                A future-facing side of Bert&apos;s Best
+                Practical AI & business intelligence
               </p>
-              <h2 id="data-title">
-                Small business data,
-                <br />
-                <span>made useful.</span>
-              </h2>
-              <p>
-                Down the road: practical data help for small businesses—from
-                clearer reporting to dashboards that make the numbers easier to
-                act on.
-              </p>
-              <span className={styles.dataComingSoon}>On the roadmap</span>
-            </div>
-            <div className={styles.dataVisual} aria-hidden="true">
-              <div className={styles.dataGrid} />
-              <div className={styles.dataOrbit} />
-              <div className={styles.dataCore}>
-                <span>DATA</span>
-                <strong>→</strong>
-                <span>DECISIONS</span>
+              <div className={styles.dataIntroCopy}>
+                <h2 id="data-title">
+                  Practical AI.
+                  <br />
+                  <span>Better decisions.</span>
+                </h2>
+                <p>
+                  Have an idea to automate—or data that could work harder?
+                  Let&apos;s turn it into something useful for you or your
+                  business.
+                </p>
               </div>
+            </div>
+            <div className={styles.dataOfferGrid}>
+              <article className={styles.dataOfferCard}>
+                <span className={styles.dataOfferLabel}>AI</span>
+                <h3>Artificial intelligence &amp; automation</h3>
+                <ul>
+                  <li>Agentic workflows and task automation</li>
+                  <li>Practical AI guidance, setup, and training</li>
+                  <li>Connect AI tools to your existing processes</li>
+                </ul>
+                <a href="#contact">Have an idea? Let&apos;s talk <span aria-hidden="true">↗</span></a>
+              </article>
+              <article className={styles.dataOfferCard}>
+                <span className={styles.dataOfferLabel}>BI</span>
+                <h3>Business intelligence</h3>
+                <ul>
+                  <li>Data management, storage, and organization</li>
+                  <li>Security, backup, and recovery planning</li>
+                  <li>Dashboards, reporting, and forecasting</li>
+                </ul>
+                <a href="#contact">Make your data useful <span aria-hidden="true">↗</span></a>
+              </article>
+            </div>
+            <div className={styles.dataVisual}>
+              <div className={styles.dataGrid} aria-hidden="true" />
+              <div className={styles.dataOrbit} aria-hidden="true" />
+              <a
+                className={styles.dataCore}
+                href="#contact"
+                aria-label="Free consultation: contact Bert"
+              >
+                <span>FREE</span>
+                <strong aria-hidden="true">→</strong>
+                <span>CONSULTATION</span>
+              </a>
               <div className={`${styles.dataBar} ${styles.dataBarOne}`} />
               <div className={`${styles.dataBar} ${styles.dataBarTwo}`} />
               <div className={`${styles.dataBar} ${styles.dataBarThree}`} />
-              <span className={styles.dataLabel}>MAKE THE SIGNAL CLEAR</span>
+              <span className={styles.dataLabel} aria-hidden="true">MAKE THE SIGNAL CLEAR</span>
             </div>
           </div>
         </section>
@@ -257,19 +283,38 @@ export default function Home() {
             <div>
               <p className={styles.eyebrow}>Start with what&apos;s going on</p>
               <h2 id="contact-title">
-                Let&apos;s make tech
+                We&apos;ll make tech
                 <br />
                 <em>less of a thing.</em>
               </h2>
             </div>
             <div className={styles.contactDetails}>
               <p>
-                Tell Bert what&apos;s giving you trouble. We&apos;ll add your
-                preferred contact details here before launch.
+                Tell Bert what&apos;s giving you trouble—and get a free quote.
+                Not sure what you need? Start with a conversation.
               </p>
-              <span className={styles.contactPlaceholder}>
-                Phone, email, or booking link · to be added
-              </span>
+              <div className={styles.contactActions}>
+                <a href="tel:+19202126601">
+                  <span>Call Bert</span>
+                  <strong>(920) 212-6601</strong>
+                </a>
+                <a href="sms:+19202126601">
+                  <span>Send a text</span>
+                  <strong>(920) 212-6601</strong>
+                </a>
+                <a href="mailto:bert@bertsbesttech.com">
+                  <span>Email Bert</span>
+                  <strong>bert@bertsbesttech.com</strong>
+                </a>
+                <a
+                  href="https://www.facebook.com/people/Berts-Best-Tech/61596461640327/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>Facebook</span>
+                  <strong>Send Bert a message ↗</strong>
+                </a>
+              </div>
               <span className={styles.contactLocal}>
                 Serving homes and small businesses across Wisconsin&apos;s Fox Valley.
               </span>
@@ -281,7 +326,13 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <a className={styles.footerBrand} href="#top">
-            <span className={styles.brandMark} aria-hidden="true">b.</span>
+            <Image
+              className={styles.footerLogo}
+              src="/bert-logo.webp"
+              alt=""
+              width={50}
+              height={50}
+            />
             <span>Bert&apos;s Best Tech</span>
           </a>
           <p>Good tech help. Good neighbors. Fox Valley, Wisconsin.</p>

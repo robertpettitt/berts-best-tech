@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Bert's Best Tech | Friendly Tech Help in the Fox Valley",
   description:
-    "Patient, down-to-earth computer, Wi-Fi, and everyday tech help for homes and small businesses across Wisconsin's Fox Valley.",
+    "Friendly computer, Wi-Fi, security camera, AI automation, and business intelligence services for homes and small businesses in Wisconsin's Fox Valley.",
 };
 
 export default function RootLayout({
