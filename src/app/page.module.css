@@ -505,6 +505,8 @@
 
 .comedyCard {
   position: relative;
+  display: grid;
+  align-content: center;
   min-height: 264px;
   overflow: hidden;
   padding: 1.45rem 1.6rem;
@@ -519,38 +521,15 @@
   transform: rotate(1deg);
 }
 
-.comedyCardTop,
-.comedyCardBottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  color: #cbb59a;
-  font-size: 0.57rem;
-  letter-spacing: 0.11em;
-}
-
-.comedyCardTop {
-  justify-content: start;
-}
-
-.recordDot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #e1a56f;
-  box-shadow: 0 0 0 4px rgba(225, 165, 111, 0.13);
-}
-
 .comedyQuote {
   position: relative;
   z-index: 1;
-  padding: 2.3rem 0 2rem 1.6rem;
+  padding-left: 1.6rem;
 }
 
 .comedyQuote > span {
   position: absolute;
-  top: 1.5rem;
+  top: -0.8rem;
   left: 0;
   color: #dfa66f;
   font-family: var(--font-display);
@@ -569,12 +548,6 @@
 .comedyQuote strong {
   color: #efbd87;
   font-weight: 600;
-}
-
-.comedyCardBottom {
-  padding-top: 0.9rem;
-  border-top: 1px solid rgba(230, 207, 180, 0.17);
-  font-size: 0.56rem;
 }
 
 .comedyDoodle {
@@ -1217,16 +1190,6 @@
     min-height: 230px;
     padding: 1.2rem;
     transform: rotate(0.5deg);
-  }
-
-  .comedyQuote {
-    padding: 2rem 0 1.7rem 1.45rem;
-  }
-
-  .comedyCardBottom {
-    align-items: start;
-    flex-direction: column;
-    gap: 0.5rem;
   }
 
   .dataVisual {

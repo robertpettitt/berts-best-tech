@@ -188,17 +188,13 @@ export default function Home() {
                 <em>family sport.</em>
               </h2>
               <p>
-                We&apos;ve all been there: stuck on the phone for an hour trying
+                We&apos;ve all been there: stuck on the phone for hours trying
                 to figure something out. Let&apos;s turn those moments into
                 something to laugh about—and bond over.
               </p>
               <span className={styles.comedyTag}>Bert&apos;s Best Skits</span>
             </div>
             <div className={styles.comedyCard} aria-label="A preview of Bert's comedy skits">
-              <div className={styles.comedyCardTop}>
-                <span className={styles.recordDot} />
-                <span>FIELD NOTES FROM THE FAMILY TECH DESK</span>
-              </div>
               <div className={styles.comedyQuote}>
                 <span aria-hidden="true">&ldquo;</span>
                 <p>
@@ -206,10 +202,6 @@ export default function Home() {
                   <br />
                   <strong>we didn&apos;t hear from you for three weeks!</strong>
                 </p>
-              </div>
-              <div className={styles.comedyCardBottom}>
-                <span>SCENE 01</span>
-                <span>Love you. Let&apos;s try that again.</span>
               </div>
               <div className={styles.comedyDoodle} aria-hidden="true">☺</div>
             </div>
